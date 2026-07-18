@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="urn:ec.europa.eu:taxud:vies:services:checkVat:types"
+            targetNamespace="urn:ec.europa.eu:taxud:vies:services:checkVat:types"
+            attributeFormDefault="qualified"
+            elementFormDefault="qualified">
+    <xsd:annotation>
+        <xsd:documentation>
+            Extracted without semantic changes from the embedded schema in the
+            European Commission VIES checkVatService.wsdl snapshot.
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="checkVat">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="countryCode" type="xsd:string"/>
+                <xsd:element name="vatNumber" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="checkVatResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="countryCode" type="xsd:string"/>
+                <xsd:element name="vatNumber" type="xsd:string"/>
+                <xsd:element name="requestDate" type="xsd:date"/>
+                <xsd:element name="valid" type="xsd:boolean"/>
+                <xsd:element name="name" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+                <xsd:element name="address" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

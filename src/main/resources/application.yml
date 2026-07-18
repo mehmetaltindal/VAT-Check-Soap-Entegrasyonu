@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: vies-invoice
+
+vies:
+  endpoint: ${VIES_ENDPOINT:https://ec.europa.eu/taxation_customs/vies/services/checkVatService}
+  connect-timeout: ${VIES_CONNECT_TIMEOUT:2s}
+  read-timeout: ${VIES_READ_TIMEOUT:5s}
+  max-attempts: ${VIES_MAX_ATTEMPTS:2}
+  retry-delay: ${VIES_RETRY_DELAY:500ms}
